@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — Aplomb</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink:    #F0618A;
+      --dark:    #121018;
+      --surface: #1E1829;
+      --text:    #F2EDF8;
+      --muted:   #C8BCDA;
+      --border:  #352B42;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: var(--pink);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: #fff;
+      flex-shrink: 0;
+    }
+
+    .logo-text { font-size: 18px; font-weight: 700; color: var(--text); }
+    .logo-sub  { font-size: 13px; color: var(--muted); }
+
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 12px 20px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--pink);
+      border-bottom-color: var(--pink);
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .page-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .page-meta {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+
+    .toc ol { padding-left: 20px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a  { color: var(--pink); text-decoration: none; font-size: 14px; }
+    .toc a:hover { text-decoration: underline; }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p  { color: var(--muted); margin-bottom: 14px; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { color: var(--muted); margin-bottom: 6px; }
+
+    strong { color: var(--text); font-weight: 600; }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--pink);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .callout p { margin-bottom: 0; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(240, 97, 138, 0.15);
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+    }
+
+    .warning {
+      background: rgba(192, 123, 0, 0.1);
+      border: 1px solid rgba(192, 123, 0, 0.3);
+      border-left: 3px solid #C07B00;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .warning p { color: #DEB87A; margin-bottom: 0; }
+
+    a { color: var(--pink); }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--pink); }
+
+    @media (max-width: 600px) {
+      .page-title { font-size: 26px; }
+      h2 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">✦</div>
+  <div>
+    <div class="logo-text">Aplomb</div>
+    <div class="logo-sub">Ballet Intelligence</div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html" class="active">Terms of Use</a>
+</nav>
+
+<div class="container">
+
+  <p class="badge">Legal</p>
+  <h1 class="page-title">Terms of Use</h1>
+  <p class="page-meta">
+    Applies to: <strong>Aplomb Technique</strong> and <strong>Aplomb Fit</strong><br>
+    Last updated: <strong>22 June 2026</strong> &nbsp;·&nbsp; Effective: 22 June 2026<br>
+    Operated by: <strong>Amie Dew, Aplomb</strong> (United Kingdom)
+  </p>
+
+  <div class="callout">
+    <p>Please read these terms carefully before using either Aplomb app. By creating an account or using any feature of the apps, you agree to these terms. If you do not agree, please do not use the apps.</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#about">About Aplomb</a></li>
+      <li><a href="#not-medical">Not medical advice</a></li>
+      <li><a href="#eligibility">Eligibility and age requirements</a></li>
+      <li><a href="#account">Your account</a></li>
+      <li><a href="#acceptable-use">Acceptable use</a></li>
+      <li><a href="#your-content">Your content (videos and photos)</a></li>
+      <li><a href="#our-content">Our content and intellectual property</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#availability">Service availability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#changes">Changes to these terms</a></li>
+      <li><a href="#governing-law">Governing law</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <h2 id="about">1. About Aplomb</h2>
+  <p>Aplomb provides two mobile applications:</p>
+  <ul>
+    <li><strong>Aplomb Technique</strong> — analyses ballet technique from phone video using AI pose estimation and a Sports Therapy-authored rule engine. It provides feedback on turnout, posture, flexibility, balance, and pirouettes.</li>
+    <li><strong>Aplomb Fit</strong> — analyses foot shape from photographs and provides pointe shoe fitting recommendations based on individual foot biomechanics.</li>
+  </ul>
+  <p>Both apps are designed to <strong>support</strong> dancers, parents, and teachers — not to replace professional coaching, physiotherapy, or medical assessment.</p>
+
+  <!-- 2 -->
+  <h2 id="not-medical">2. Not medical advice</h2>
+
+  <div class="warning">
+    <p><strong>Important:</strong> The analysis, scores, corrections, and recommendations provided by Aplomb apps are for educational and informational purposes only. They do not constitute medical advice, physiotherapy, or clinical assessment. Do not use Aplomb as a substitute for professional medical, physiotherapy, or sports medicine advice.</p>
+  </div>
+
+  <p>If you or a dancer in your care experiences pain, injury, or discomfort, please consult a qualified healthcare professional before continuing dance training. The safety flags generated by Aplomb are designed to prompt a conversation with a teacher or professional — they are not a clinical diagnosis.</p>
+  <p>By using Aplomb, you acknowledge that:</p>
+  <ul>
+    <li>AI analysis has inherent limitations and may not capture all aspects of technique</li>
+    <li>Results should be interpreted in context, ideally alongside a qualified dance teacher</li>
+    <li>Aplomb is not liable for any injury that occurs in connection with the use of feedback from the apps</li>
+  </ul>
+
+  <!-- 3 -->
+  <h2 id="eligibility">3. Eligibility and age requirements</h2>
+  <ul>
+    <li><strong>Under 13:</strong> You may not create an account independently. A parent or legal guardian must create and manage the account on your behalf and must consent to these terms and the Privacy Policy.</li>
+    <li><strong>13–17:</strong> You may create your own account, but by doing so you confirm that your parent or guardian is aware of your use of the app and consents to the processing of your data as described in our <a href="privacy.html">Privacy Policy</a>.</li>
+    <li><strong>18 and over:</strong> You may create an account independently. By doing so you confirm you are 18 or over.</li>
+  </ul>
+  <p>We reserve the right to suspend accounts where age requirements are not met.</p>
+
+  <!-- 4 -->
+  <h2 id="account">4. Your account</h2>
+  <ul>
+    <li>You are responsible for keeping your login credentials secure. Do not share your password.</li>
+    <li>You must provide accurate information when registering.</li>
+    <li>You are responsible for all activity that occurs under your account.</li>
+    <li>Notify us immediately at <a href="mailto:hello@aplombtechnique.app">hello@aplombtechnique.app</a> if you suspect unauthorised access to your account.</li>
+    <li>You may delete your account at any time from within the app. Deletion is permanent and triggers the data retention schedule described in our Privacy Policy.</li>
+  </ul>
+
+  <!-- 5 -->
+  <h2 id="acceptable-use">5. Acceptable use</h2>
+
+  <p>You agree not to:</p>
+  <ul>
+    <li>Upload content that is illegal, harmful, sexually explicit, or harassing</li>
+    <li>Upload videos or photos of other people without their consent (or, for minors, parental consent)</li>
+    <li>Attempt to reverse-engineer, decompile, or extract the AI models or rule engine from the apps</li>
+    <li>Use the apps to scrape, harvest, or collect data about other users</li>
+    <li>Attempt to bypass authentication, rate limits, or security controls</li>
+    <li>Use the apps for any commercial purpose without our written consent</li>
+    <li>Upload content that infringes third-party intellectual property rights</li>
+  </ul>
+
+  <p>We reserve the right to suspend or terminate accounts that violate these rules, without notice in serious cases.</p>
+
+  <!-- 6 -->
+  <h2 id="your-content">6. Your content (videos and photos)</h2>
+  <p>You retain ownership of any videos and photographs you upload to Aplomb. By uploading content, you grant us a limited, non-exclusive licence to process that content for the sole purpose of providing the analysis service to you.</p>
+  <p>Specifically, we:</p>
+  <ul>
+    <li><strong>Do</strong> use your videos/photos to run the AI analysis and generate your results</li>
+    <li><strong>Do not</strong> use your videos/photos to train AI models without separate, explicit consent</li>
+    <li><strong>Do not</strong> share your videos/photos with any third party (beyond the processors listed in our Privacy Policy)</li>
+    <li><strong>Do not</strong> display your content publicly</li>
+  </ul>
+  <p>You confirm that you have the right to upload any content you submit, including the consent of any identifiable individuals appearing in videos or photographs.</p>
+  <p><strong>For videos featuring minors:</strong> You confirm that you are the parent/guardian of any child appearing in the video, or that you have written parental consent for their participation.</p>
+
+  <!-- 7 -->
+  <h2 id="our-content">7. Our content and intellectual property</h2>
+  <p>The Aplomb apps, including all software, AI models, rule engines, design, written content, and analysis frameworks, are owned by Amie Dew / Aplomb and protected by copyright and other intellectual property laws.</p>
+  <p>The Sports Therapy-informed technique rule engine and pointe shoe fitting methodology are proprietary. You may not reproduce, distribute, or create derivative works from any part of the apps or their output without our written permission.</p>
+  <p>The feedback and analysis results generated for you are provided for your personal use only and may not be reproduced commercially.</p>
+
+  <!-- 8 -->
+  <h2 id="liability">8. Limitation of liability</h2>
+  <p>To the fullest extent permitted by applicable law:</p>
+  <ul>
+    <li>Aplomb is provided "as is" without warranties of any kind, express or implied</li>
+    <li>We do not warrant that the apps will be error-free, uninterrupted, or that AI analysis results will be accurate in all circumstances</li>
+    <li>We are not liable for any indirect, incidental, special, or consequential damages arising from your use of the apps, including but not limited to injury arising from following feedback provided by the apps</li>
+    <li>Our total liability to you for any claim arising from your use of the apps is limited to the amount you paid for the service in the 12 months preceding the claim</li>
+  </ul>
+  <p>Nothing in these terms excludes or limits liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded under English law.</p>
+
+  <!-- 9 -->
+  <h2 id="availability">9. Service availability</h2>
+  <p>We aim to provide a reliable service but cannot guarantee 100% uptime. We may temporarily suspend the service for maintenance, updates, or reasons outside our control. We will endeavour to give reasonable notice of planned downtime.</p>
+  <p>During the pilot phase (June–September 2026), the apps are provided free of charge. Pricing for subsequent tiers will be communicated with at least 30 days' notice.</p>
+
+  <!-- 10 -->
+  <h2 id="termination">10. Termination</h2>
+  <p>You may stop using the apps and delete your account at any time.</p>
+  <p>We may suspend or terminate your account if you breach these terms, provide false information, or where required by law. In non-urgent cases, we will give you reasonable notice and an opportunity to resolve the issue.</p>
+  <p>On termination, your data will be handled in accordance with our <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <!-- 11 -->
+  <h2 id="changes">11. Changes to these terms</h2>
+  <p>We may update these terms from time to time. We will notify you of material changes by email and through an in-app notice at least 14 days before the change takes effect. Your continued use of the apps after that date constitutes acceptance of the updated terms.</p>
+  <p>If you do not agree to the updated terms, you may close your account before the effective date.</p>
+
+  <!-- 12 -->
+  <h2 id="governing-law">12. Governing law</h2>
+  <p>These terms are governed by the law of <strong>England and Wales</strong>. Any disputes arising from your use of the apps will be subject to the exclusive jurisdiction of the courts of England and Wales, except where local consumer protection law requires otherwise.</p>
+
+  <!-- 13 -->
+  <h2 id="contact">13. Contact</h2>
+  <p>For questions about these terms:</p>
+  <p>
+    <strong>Amie Dew — Aplomb</strong><br>
+    Email: <a href="mailto:hello@aplombtechnique.app">hello@aplombtechnique.app</a><br>
+    United Kingdom
+  </p>
+
+</div>
+
+<footer>
+  &copy; 2026 Aplomb · Amie Dew · United Kingdom ·
+  <a href="privacy.html">Privacy Policy</a> ·
+  <a href="terms.html">Terms of Use</a> ·
+  <a href="mailto:hello@aplombtechnique.app">Contact</a>
+</footer>
+
+</body>
+</html>

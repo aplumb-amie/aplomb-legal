@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Aplomb</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink:    #F0618A;
+      --dark:    #121018;
+      --surface: #1E1829;
+      --text:    #F2EDF8;
+      --muted:   #C8BCDA;
+      --border:  #352B42;
+      --white:   #FFFFFF;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: var(--pink);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: #fff;
+      flex-shrink: 0;
+    }
+
+    .logo-text { font-size: 18px; font-weight: 700; color: var(--text); }
+    .logo-sub  { font-size: 13px; color: var(--muted); }
+
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; gap: 0;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 12px 20px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--pink);
+      border-bottom-color: var(--pink);
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .page-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .page-meta {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--pink);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    li {
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    strong { color: var(--text); font-weight: 600; }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--pink);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .callout p { margin-bottom: 0; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(240, 97, 138, 0.15);
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 600;
+      padding: 10px 14px;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+
+    td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    a { color: var(--pink); }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--pink); }
+
+    @media (max-width: 600px) {
+      .page-title { font-size: 26px; }
+      h2 { font-size: 20px; }
+      table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">✦</div>
+  <div>
+    <div class="logo-text">Aplomb</div>
+    <div class="logo-sub">Ballet Intelligence</div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="privacy.html" class="active">Privacy Policy</a>
+  <a href="terms.html">Terms of Use</a>
+</nav>
+
+<div class="container">
+
+  <p class="badge">Legal</p>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-meta">
+    Applies to: <strong>Aplomb Technique</strong> and <strong>Aplomb Fit</strong><br>
+    Last updated: <strong>22 June 2026</strong> &nbsp;·&nbsp; Effective: 22 June 2026<br>
+    Data Controller: <strong>Amie Dew, Aplomb</strong> (United Kingdom)
+  </p>
+
+  <div class="callout">
+    <p>This policy is written in plain English. If something is unclear, please contact us — we are happy to explain. Your privacy matters to us and we have designed both apps with data minimisation and safeguarding at the centre.</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#who-we-are">Who we are</a></li>
+      <li><a href="#what-we-collect">What data we collect</a></li>
+      <li><a href="#how-we-use">How we use your data</a></li>
+      <li><a href="#legal-basis">Legal basis for processing</a></li>
+      <li><a href="#children">Children and young people</a></li>
+      <li><a href="#third-parties">Third-party processors</a></li>
+      <li><a href="#retention">How long we keep your data</a></li>
+      <li><a href="#your-rights">Your rights</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#international">International transfers</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <h2 id="who-we-are">1. Who we are</h2>
+  <p>Aplomb is operated by <strong>Amie Dew</strong>, based in the United Kingdom. Amie holds a degree in Sports Therapy and a Master's in Social Work, and has designed both apps with a professional commitment to safeguarding, data minimisation, and the wellbeing of dancers of all ages.</p>
+  <p>We operate two apps:</p>
+  <ul>
+    <li><strong>Aplomb Technique</strong> (<em>aplombtechnique.app</em>) — AI-powered ballet technique analysis using phone video</li>
+    <li><strong>Aplomb Fit</strong> (<em>aplombfit.app</em>) — AI-powered pointe shoe fitting analysis using foot photographs</li>
+  </ul>
+  <p>For the purposes of UK GDPR and the Data Protection Act 2018, Amie Dew is the <strong>data controller</strong>.</p>
+  <p><strong>Contact:</strong> <a href="mailto:hello@aplombtechnique.app">hello@aplombtechnique.app</a></p>
+
+  <!-- 2 -->
+  <h2 id="what-we-collect">2. What data we collect</h2>
+
+  <h3>2.1 Account information</h3>
+  <ul>
+    <li>Name and email address</li>
+    <li>Role (dancer, parent, teacher, studio)</li>
+    <li>Date of birth (used to apply appropriate safeguards for under-18 users)</li>
+    <li>Password (stored as a one-way hash — we cannot read it)</li>
+  </ul>
+
+  <h3>2.2 Movement and body data (Aplomb Technique)</h3>
+  <ul>
+    <li>Video recordings you submit for analysis (up to 500 MB per video)</li>
+    <li>Extracted pose landmarks (body joint position data derived from your video)</li>
+    <li>Technique analysis results: turnout angles, pelvic alignment, balance metrics, pirouette axis data, flexibility ranges</li>
+    <li>Skill level and focus area you select before each analysis</li>
+  </ul>
+
+  <h3>2.3 Foot and footwear data (Aplomb Fit)</h3>
+  <ul>
+    <li>Photographs of your feet you submit for analysis</li>
+    <li>Foot shape measurements derived from those photographs</li>
+    <li>Pointe shoe fitting analysis results and recommendations</li>
+  </ul>
+
+  <h3>2.4 Usage data</h3>
+  <ul>
+    <li>App interactions (screens visited, features used, time of use)</li>
+    <li>Device type and operating system version</li>
+    <li>Error logs (used to fix bugs — contain no personal movement data)</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Health-adjacent data.</strong> Biomechanical movement data and foot shape analysis may constitute special category health data under UK GDPR (Article 9). We treat all such data with the highest level of protection and process it only with your explicit consent.</p>
+  </div>
+
+  <!-- 3 -->
+  <h2 id="how-we-use">3. How we use your data</h2>
+
+  <table>
+    <thead>
+      <tr><th>Purpose</th><th>Data used</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Providing the analysis service (technique or fitting)</td><td>Video / photos, pose landmarks, foot measurements</td></tr>
+      <tr><td>Displaying your results, history, and progress</td><td>Analysis results, session records</td></tr>
+      <tr><td>Safeguarding — alerting teachers to high-severity injury risk flags</td><td>Safety flags from analysis; teacher relationship data</td></tr>
+      <tr><td>Sending session-related notifications</td><td>Email address</td></tr>
+      <tr><td>Fixing bugs and improving app performance</td><td>Error logs, device data (no body data)</td></tr>
+      <tr><td>Legal compliance and dispute resolution</td><td>Account data, usage records</td></tr>
+    </tbody>
+  </table>
+
+  <p>We do <strong>not</strong> use your data for advertising, sell it to third parties, or use it to train AI models without your separate explicit consent.</p>
+
+  <!-- 4 -->
+  <h2 id="legal-basis">4. Legal basis for processing (UK GDPR)</h2>
+
+  <table>
+    <thead>
+      <tr><th>Processing activity</th><th>Legal basis</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Providing the core analysis service</td><td>Article 6(1)(b) — performance of a contract</td></tr>
+      <tr><td>Processing movement / body / foot data (special category)</td><td>Article 9(2)(a) — explicit consent</td></tr>
+      <tr><td>Safety alerts to teachers</td><td>Article 6(1)(f) — legitimate interests (safeguarding); Article 9(2)(b) where applicable</td></tr>
+      <tr><td>App improvement and error logging</td><td>Article 6(1)(f) — legitimate interests (product quality)</td></tr>
+      <tr><td>Legal compliance</td><td>Article 6(1)(c) — legal obligation</td></tr>
+    </tbody>
+  </table>
+
+  <p>Where we rely on <strong>explicit consent</strong> (particularly for body data), you may withdraw that consent at any time by deleting your account or contacting us. Withdrawal does not affect the lawfulness of processing before withdrawal.</p>
+
+  <!-- 5 -->
+  <h2 id="children">5. Children and young people</h2>
+
+  <p>Both apps are designed for use by dancers of all ages, including children from around age 9. We take our responsibilities to young users extremely seriously, informed by our professional background in social work and safeguarding.</p>
+
+  <h3>5.1 Age gates</h3>
+  <ul>
+    <li><strong>Under 13:</strong> Parental or guardian consent is required before an account can be created. The account must be set up by a parent or guardian.</li>
+    <li><strong>13–17:</strong> Users may create their own accounts, but we strongly encourage parental awareness. Studio teachers are notified of any high-severity safety flags raised during analysis.</li>
+    <li><strong>18 and over:</strong> Standard adult data rights apply.</li>
+  </ul>
+
+  <h3>5.2 Additional protections for under-18 users</h3>
+  <ul>
+    <li>No targeted marketing or behavioural profiling</li>
+    <li>Data minimisation — we collect only what is necessary for the analysis service</li>
+    <li>Safety flags raised by the AI are always shared with the designated teacher account (where one exists in the same studio)</li>
+    <li>Videos and foot photographs are stored securely and never used for purposes beyond the stated analysis</li>
+  </ul>
+
+  <h3>5.3 Parental access and deletion</h3>
+  <p>Parents and guardians of under-13 users may request access to, correction of, or deletion of their child's data at any time by contacting us at <a href="mailto:hello@aplombtechnique.app">hello@aplombtechnique.app</a>.</p>
+
+  <!-- 6 -->
+  <h2 id="third-parties">6. Third-party processors</h2>
+
+  <p>We share data only with the following processors, who are bound by appropriate data processing agreements:</p>
+
+  <table>
+    <thead>
+      <tr><th>Processor</th><th>Purpose</th><th>Location</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Supabase</strong></td><td>Secure database and file storage (videos, photos, analysis results)</td><td>EU (Frankfurt)</td></tr>
+      <tr><td><strong>Render.com</strong></td><td>Backend API server hosting (AI analysis processing)</td><td>EU / US (Oregon)</td></tr>
+      <tr><td><strong>Expo / EAS</strong></td><td>App delivery and over-the-air updates</td><td>US</td></tr>
+      <tr><td><strong>Apple App Store</strong></td><td>iOS app distribution (Apple's own privacy policy applies)</td><td>US</td></tr>
+      <tr><td><strong>Google Play</strong></td><td>Android app distribution (Google's own privacy policy applies)</td><td>US</td></tr>
+    </tbody>
+  </table>
+
+  <p>We do not use any advertising networks, analytics platforms (e.g. Google Analytics, Facebook Pixel), or data brokers.</p>
+
+  <!-- 7 -->
+  <h2 id="retention">7. How long we keep your data</h2>
+
+  <table>
+    <thead>
+      <tr><th>Data type</th><th>Retention period</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Account information</td><td>Until you delete your account, then 30 days before permanent deletion</td></tr>
+      <tr><td>Video recordings (Technique app)</td><td>90 days after upload, then automatically deleted. You may delete sooner via the app.</td></tr>
+      <tr><td>Foot photographs (Fit app)</td><td>90 days after upload, then automatically deleted. You may delete sooner via the app.</td></tr>
+      <tr><td>Analysis results and pose landmark data</td><td>Until you delete your account or request deletion</td></tr>
+      <tr><td>Error logs</td><td>30 days</td></tr>
+      <tr><td>Safety alert records</td><td>12 months (safeguarding requirements)</td></tr>
+    </tbody>
+  </table>
+
+  <!-- 8 -->
+  <h2 id="your-rights">8. Your rights</h2>
+
+  <p>Under UK GDPR you have the following rights. To exercise any of them, email <a href="mailto:hello@aplombtechnique.app">hello@aplombtechnique.app</a>. We will respond within <strong>30 days</strong>.</p>
+
+  <ul>
+    <li><strong>Right of access</strong> — request a copy of all data we hold about you</li>
+    <li><strong>Right to rectification</strong> — ask us to correct inaccurate data</li>
+    <li><strong>Right to erasure</strong> — ask us to delete your data ("right to be forgotten")</li>
+    <li><strong>Right to restrict processing</strong> — ask us to pause processing while a concern is resolved</li>
+    <li><strong>Right to data portability</strong> — receive your data in a machine-readable format</li>
+    <li><strong>Right to object</strong> — object to processing based on legitimate interests</li>
+    <li><strong>Right to withdraw consent</strong> — withdraw consent for body/health data processing at any time</li>
+    <li><strong>Rights related to automated decision-making</strong> — our AI analysis informs you; it does not make decisions with legal or significant effects without human oversight</li>
+  </ul>
+
+  <p>You also have the right to <strong>lodge a complaint</strong> with the UK supervisory authority:</p>
+  <p>
+    <strong>Information Commissioner's Office (ICO)</strong><br>
+    <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener">ico.org.uk/make-a-complaint</a><br>
+    Helpline: 0303 123 1113
+  </p>
+
+  <!-- 9 -->
+  <h2 id="security">9. Security</h2>
+
+  <p>We take technical and organisational measures to protect your data, including:</p>
+  <ul>
+    <li>All data transmitted over HTTPS/TLS</li>
+    <li>Videos and photographs stored in private, access-controlled Supabase Storage buckets</li>
+    <li>Passwords hashed using bcrypt (we cannot recover your password)</li>
+    <li>JWT authentication with short-lived tokens</li>
+    <li>Access to production systems restricted to the data controller only</li>
+    <li>Regular security reviews of API endpoints and storage access rules</li>
+  </ul>
+
+  <p>In the event of a data breach affecting your personal data, we will notify you and the ICO within 72 hours as required by UK GDPR.</p>
+
+  <!-- 10 -->
+  <h2 id="international">10. International transfers</h2>
+
+  <p>Some of our processors (Render.com for US servers, Expo/EAS, Apple, Google) are based in the United States. Where data is transferred outside the UK, we rely on the UK's International Data Transfer Agreement (IDTA) framework or the UK adequacy decisions to ensure an equivalent level of protection.</p>
+
+  <!-- 11 -->
+  <h2 id="changes">11. Changes to this policy</h2>
+
+  <p>We may update this policy when we add new features or in response to legal changes. We will notify you of material changes by email and by a notice within the app at least 14 days before the change takes effect. The date at the top of this page always shows when it was last updated.</p>
+
+  <!-- 12 -->
+  <h2 id="contact">12. Contact us</h2>
+
+  <p>For any privacy questions, data requests, or concerns:</p>
+  <p>
+    <strong>Amie Dew — Data Controller, Aplomb</strong><br>
+    Email: <a href="mailto:hello@aplombtechnique.app">hello@aplombtechnique.app</a><br>
+    United Kingdom
+  </p>
+
+  <div class="callout">
+    <p><strong>Note:</strong> This privacy policy has been drafted carefully but does not constitute legal advice. If you are setting up a studio account or processing data on behalf of a school or organisation, we recommend seeking independent legal advice regarding your own data controller obligations.</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Aplomb · Amie Dew · United Kingdom ·
+  <a href="privacy.html">Privacy Policy</a> ·
+  <a href="terms.html">Terms of Use</a> ·
+  <a href="mailto:hello@aplombtechnique.app">Contact</a>
+</footer>
+
+</body>
+</html>
